@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>California House Price Prediction</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=t-4fYqtVeAVYHGsooevGrJ8kKxQkBqnm6zuZXiLukb-2D2zqN-gY1JTOvwCuqxqLNcpip_4dDo_V1EN8E0ieEZ3bcIAmFSRIymZ_ZRJ02TaphzJ41ta5_INuVhRfMv8zrc5En2oN0Xfe2zVeBKLpjqO3koyotDgWeCEWdBxdfE7xNB_z74XeBJubIiAZyzFT5NdSU0SDrxDnX1irhNtSSjb7Ygu22GD_mrLT216qrb02ukf70LL9UXux1DePGK2FQXv7lUUKT1RJxnZ20kEfyXoTMedyep3d-D07u9vY6QYMJNDoyxiybTx4w5zhkorNPKXxN4k0QS8G_0R0cM4L5ej6LO5emWlAWS8XkGhg3MGxnbE6XPpL2uDqSXK-awm-A9inB5Au90k3jVCIrBdHMwNQHCDRK93O8Zaj537f4-e8gMAH7Kl46zeK1UQpF2D8DOHb5HiMgNSrpYqP7aaQyqGHC_0Fg-WdAobziNWyKs_hyKX3YU0j3w20ou4e0iOfBS-83ciawj5ugwpHMQJHO63OUkr_kOSjmGxAfOB9V5OXS3H7rzlJXOY35TEq5SgCLQX-3SQpy1_Q2Z9pUa4oAreoB9AGwGdyqWGax8YyQwc-tvAZZhTeTS69XIzNbp-KpK8IBSAyvsJwzR-bCFvRwuYeWQzM4f1T-C0lT5Sl4FVo6lgrzXeY9A6RxSyPGQQn8gCOaRgBB0eFicFZKFjiqOlw8H1jZJ5h5T34WQ6vg2jK3o9bG12RfXL-QfdpnyWrgC9AVc9eiObxGt-0LH9orjGgsl42gQ1lIS7gjpEEYaULuE2vsQrJgg2BAYf5b7QaG3Nh6vCauqgOIdQmhMO-tDhAsyTg_f0wwT68e74weGmY85i3_ydds6p5xVSKUGLygBQ9Sh5spQJIlwGuNwyQWtcnN6AZ9FjhVeLwA5e8NnMRqArlcAvv9qoAsUxZ9GHkYwvD7uxwczRNAfo5YYTiwuYi-Yt265RiaRPG0lgNz06lf4R0VRbQeDP3VnlrbRDwHg98tTZWoZgR48lD3j0F2N5IqvAd7u48aEpF6zmek9Stq8XfAy1IOVrSHOEzZeecgLvCEeiMhoAjCHSdCPrrIxbCVw0zt2MNyfVxXGxYyGo72vuMlZvt6zhKr3Bpl1pFXp0PBHTyJ8cHmQkZqYsL0pnkEsAn5KepRisV-hENP3LC_x5pPyciI7CdtlFTMUDCLyvOI77kLKtcVDk9nX1QIg" nonce="372b15f627be3f48adea7ffd8891f13e" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form" style= "justify-content: center;
+display: flex;">
+    <table >
+        <tr>
+    <td><h2>Longitude</h2>
+        <input class="long"  type="text" id="uiLong" class="floatLabel" name="long" value="0"></td>
+	<td>
+	<h2>Latitude</h2>
+    <input class="lat"  type="text" id="uiLat" class="floatLabel" name="lat" value="0">
+    </td>
+    <td>
+	<h2>House Age</h2>
+    <input class="age"  type="text" id="uiAge"  name="age" value="0">
+    </td>
+    <td>
+    <h2>Rooms in Area</h2>
+    <input class="room"  type="text" id="uiRoom"  name="room" value="0"></td>
+    </tr>
+    <tr>
+    <td>
+    <h2>Bedrooms in Area</h2>
+    <input class="bedroom"  type="text" id="uiBedroom" class="floatLabel" name="bedroom" value="0">
+    </td>
+    <td>
+    <h2>Population</h2>
+    <input class="population"  type="text" id="uiPopulation" class="floatLabel" name="population" value="0">
+    </td>
+     <td>
+    <h2>Households</h2>
+    <input class="household"  type="text" id="uiHousehold" class="floatLabel" name="household" value="0">
+    </td>
+    <td>
+    <h2>Median Income</h2>
+    <input class="income"  type="text" id="uiIncome" class="floatLabel" name="income" value="0">
+    </td>
+    </tr>
+    </table>
+	</form>
+
+<form class="form">
+	<h2>Location</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+		<option>NEAR BAY</option>
+        <option>NEAR OCEAN</option>
+        <option>INLAND</option>
+        <option>ISLAND</option>
+        <option>LESS THAN 1H FROM OCEAN</option>
+  </select>
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
